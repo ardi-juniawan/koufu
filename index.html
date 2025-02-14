@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header id="header" class="fixed top-0 w-full bg-black transition-opacity duration-300">
+        <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+          <a class="block text-teal-600" href="#">
+            <span class="sr-only">Home</span>
+            <img src="img/navbar-logo.png" class="h-20 w-full" viewBox="0 0 28 24" fill="none" >
+              <path
+              />
+            </svg>
+          </a>
+      
+          <div class="flex flex-1 items-center justify-end md:justify-between">
+            <nav aria-label="Global" class="hidden md:block">
+              <ul class="flex items-center gap-6 text-sm">
+                <li>
+                  <a class="text-gray-400 transition hover:text-white" href="#"> Home </a>
+                </li>
+      
+                <li>
+                  <a class="text-gray-400 transition hover:text-white" href="#"> About Us </a>
+                </li>
+      
+                <li>
+                  <a class="text-gray-400 transition hover:text-white" href="#"> Gallery </a>
+                </li>
+      
+                <li>
+                  <a class="text-gray-400 transition hover:text-white" href="#"> Reservation </a>
+                </li>
+              </ul>
+            </nav>
+      
+            <div class="flex items-center gap-4">
+              <div class="sm:flex sm:gap-4">
+                <a
+                  class="block rounded-md bg-yellow-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-yellow-500"
+                  href="#"
+                >
+                  Login
+                </a>
+      
+                <a
+                  class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block"
+                  href="#"
+                >
+                  Register
+                </a>
+              </div>
+      
+              <button
+                class="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"
+              >
+                <span class="sr-only">Toggle menu</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="size-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero -->
+       <!--
+  Heads up! 👋
+
+  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+-->
+
+<section class="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2" style="margin-top: 60px;">
+    <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+      <div class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+        <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
+          Koufu Billiard & Cafe
+        </h2>
+  
+        <p class="hidden text-gray-500 md:mt-4 md:block text-justify">
+            Nikmati pengalaman bermain billiard yang seru dan nyaman di Koufu & Cafe! Dengan meja berkualitas, pencahayaan yang pas, dan suasana cozy, tempat ini cocok untuk pemula hingga pro. Sambil bermain, kamu juga bisa menikmati berbagai pilihan makanan dan minuman yang siap menemani keseruanmu. Ajak teman-temanmu dan rasakan sendiri sensasi bermain billiard yang asik hanya di Koufu & Cafe!
+        </p>
+  
+        <div class="mt-4 md:mt-8">
+          <a
+            href="#"
+            class="inline-block rounded-sm bg-yellow-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-yellow-500 focus:ring-3 focus:ring-yellow-400 focus:outline-hidden"
+          >
+            Book Table Now
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <img
+      alt=""
+      src="img/1.jpeg"
+      class="h-56 w-full object-cover sm:h-full"
+    />
+</section>
+
+    <!-- Stat Component -->
+    <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+        <div class="mx-auto max-w-3xl text-center">
+          <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Layanan yang ditawarkan oleh Koufu Billiard & Cafe</h2>
+        </div>
+      
+        <dl
+          class="mg-6 grid grid-cols-1 gap-4 divide-y divide-gray-100 sm:mt-8 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4"
+        >
+          <div class="flex flex-col px-4 py-8 text-center">
+            <dt class="order-last text- font-medium text-yellow-800 mt-4">Standard International Table</dt>
+            <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl"><img class="rounded-lg" src="img/2.jpeg"></dd>
+          </div>
+      
+          <div class="flex flex-col px-4 py-8 text-center">
+            <dt class="order-last text- font-medium text-yellow-800 mt-4">Best Equipment</dt>
+            <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl"><img class="rounded-lg" src="img/4.jpg"></dd>
+          </div>
+      
+          <div class="flex flex-col px-4 py-8 text-center">
+            <dt class="order-last text- font-medium text-yellow-800 mt-4">Best Services</dt>
+            <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl"><img class="rounded-lg" src="img/1.jpeg"></dd>
+          </div>
+      
+          <div class="flex flex-col px-4 py-8 text-center">
+            <dt class="order-last text- font-medium text-yellow-800 mt-4">Best Price</dt>
+            <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl"><img class="rounded-lg" src="img/3.jpg"></dd>
+          </div>
+        </dl>
+      </div>
+  </section>
+
+  <!--  Gallery -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
+    </div>
+</div>
+
+  
+  <!-- Form -->
+   <!--
+  Heads up! 👋
+
+  Plugins:
+    - @tailwindcss/forms
+-->
+
+<section class="relative flex flex-wrap lg:h-screen lg:items-center">
+    <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
+      <div class="mx-auto max-w-lg text-center">
+        <h1 class="text-2xl font-bold sm:text-3xl">Get started today!</h1>
+  
+        <p class="mt-4 text-gray-500">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla eaque error neque
+          ipsa culpa autem, at itaque nostrum!
+        </p>
+      </div>
+  
+      <form action="#" class="mx-auto mt-8 mb-0 max-w-md space-y-4">
+        <div>
+          <label for="email" class="sr-only">Email</label>
+  
+          <div class="relative">
+            <input
+              type="email"
+              class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-xs"
+              placeholder="Enter email"
+            />
+  
+            <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+  
+        <div>
+          <label for="password" class="sr-only">Password</label>
+  
+          <div class="relative">
+            <input
+              type="password"
+              class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-xs"
+              placeholder="Enter password"
+            />
+  
+            <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-4 text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+  
+        <div class="flex items-center justify-between">
+          <p class="text-sm text-gray-500">
+            No account?
+            <a class="underline" href="#">Sign up</a>
+          </p>
+  
+          <button
+            type="submit"
+            class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
+          >
+            Sign in
+          </button>
+        </div>
+      </form>
+    </div>
+  
+    <div class="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
+      <img
+        alt=""
+        src="https://images.unsplash.com/photo-1630450202872-e0829c9d6172?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+        class="absolute z-[-1] inset-0 h-full w-full object-cover"
+      />
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+
+  </body>
+</html>
