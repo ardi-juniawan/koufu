@@ -6,7 +6,7 @@
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <header id="header" class="fixed top-0 w-full bg-black transition-opacity duration-300">
+    <header id="header" class="fixed z-[1] top-0 w-full bg-black transition-opacity duration-300">
         <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
           <a class="block text-teal-600" href="#">
             <span class="sr-only">Home</span>
@@ -21,10 +21,6 @@
               <ul class="flex items-center gap-6 text-sm">
                 <li>
                   <a class="text-gray-400 transition hover:text-white" href="#"> Home </a>
-                </li>
-      
-                <li>
-                  <a class="text-gray-400 transition hover:text-white" href="#"> About Us </a>
                 </li>
       
                 <li>
@@ -145,40 +141,22 @@
   <!--  Gallery -->
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
     <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="img/5.jpg" alt="">
     </div>
     <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="img/6.jpg" alt="">
     </div>
     <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="img/7.jpg" alt="">
     </div>
     <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="img/8.jpg" alt="">
     </div>
     <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="img/9.jpg" alt="">
     </div>
     <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
+        <img class="h-auto max-w-full rounded-lg" src="img/10.jpg" alt="">
     </div>
 </div>
 
@@ -191,106 +169,186 @@
     - @tailwindcss/forms
 -->
 
-<section class="relative flex flex-wrap lg:h-screen lg:items-center">
-    <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
-      <div class="mx-auto max-w-lg text-center">
-        <h1 class="text-2xl font-bold sm:text-3xl">Get started today!</h1>
-  
-        <p class="mt-4 text-gray-500">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et libero nulla eaque error neque
-          ipsa culpa autem, at itaque nostrum!
-        </p>
+<!-- component -->
+<!-- Code on GiHub: https://github.com/vitalikda/form-floating-labels-tailwindcss -->
+<style>
+  .-z-1 {
+    z-index: -1;
+  }
+
+  .origin-0 {
+    transform-origin: 0%;
+  }
+
+  input:focus ~ label,
+  input:not(:placeholder-shown) ~ label,
+  textarea:focus ~ label,
+  textarea:not(:placeholder-shown) ~ label,
+  select:focus ~ label,
+  select:not([value='']):valid ~ label {
+    /* @apply transform; scale-75; -translate-y-6; */
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate))
+      skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    --tw-scale-x: 0.75;
+    --tw-scale-y: 0.75;
+    --tw-translate-y: -1.5rem;
+  }
+
+  input:focus ~ label,
+  select:focus ~ label {
+    /* @apply text-black; left-0; */
+    --tw-text-opacity: 1;
+    color: rgba(0, 0, 0, var(--tw-text-opacity));
+    left: 0px;
+  }
+</style>
+
+<div class="min-h-screen bg-gray-100 p-0 sm:p-12">
+  <div class="mx-auto max-w-md px-6 py-12 bg-white border-0 shadow-lg sm:rounded-3xl">
+    <h1 class="text-2xl font-bold mb-8">Book Reservation Table Here</h1>
+    <form id="form" novalidate>
+      <div class="relative z-0 w-full mb-5">
+        <input
+          type="text"
+          name="name"
+          placeholder=" "
+          required
+          class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+        />
+        <label for="name" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter name</label>
+        <span class="text-sm text-red-600 hidden" id="error">Name is required</span>
       </div>
-  
-      <form action="#" class="mx-auto mt-8 mb-0 max-w-md space-y-4">
-        <div>
-          <label for="email" class="sr-only">Email</label>
-  
-          <div class="relative">
+
+      <div class="relative z-0 w-full mb-5">
+        <input
+          type="email"
+          name="email"
+          placeholder=" "
+          class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+        />
+        <label for="email" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter Phone Number</label>
+        <span class="text-sm text-red-600 hidden" id="error">Email address is required</span>
+      </div>
+
+      <fieldset class="relative z-0 w-full p-px mb-5">
+        <legend class="absolute text-gray-500 transform scale-75 -top-3 origin-0">Floor</legend>
+        <div class="block pt-3 pb-2 space-x-4">
+          <label>
             <input
-              type="email"
-              class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-xs"
-              placeholder="Enter email"
+              type="radio"
+              name="radio"
+              value="1"
+              class="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black"
             />
-  
-            <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="size-4 text-gray-400"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-  
-        <div>
-          <label for="password" class="sr-only">Password</label>
-  
-          <div class="relative">
+            1st Floor
+          </label>
+          <label>
             <input
-              type="password"
-              class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-xs"
-              placeholder="Enter password"
+              type="radio"
+              name="radio"
+              value="2"
+              class="mr-2 text-black border-2 border-gray-300 focus:border-gray-300 focus:ring-black"
             />
-  
-            <span class="absolute inset-y-0 end-0 grid place-content-center px-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="size-4 text-gray-400"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                />
-              </svg>
-            </span>
-          </div>
+            2nd Floor
+          </label>
         </div>
-  
-        <div class="flex items-center justify-between">
-          <p class="text-sm text-gray-500">
-            No account?
-            <a class="underline" href="#">Sign up</a>
-          </p>
-  
-          <button
-            type="submit"
-            class="inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white"
-          >
-            Sign in
-          </button>
+        <span class="text-sm text-red-600 hidden" id="error">Option has to be selected</span>
+      </fieldset>
+
+      <div class="relative z-0 w-full mb-5">
+        <select
+          name="select"
+          value=""
+          onclick="this.setAttribute('value', this.value);"
+          class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+        >
+          <option value="" selected disabled hidden></option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+          <option value="4">Option 4</option>
+          <option value="5">Option 5</option>
+        </select>
+        <label for="select" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Choose Your Package</label>
+        <span class="text-sm text-red-600 hidden" id="error">Package has to be selected</span>
+      </div>
+
+      <div class="flex flex-row space-x-4">
+        <div class="relative z-0 w-full mb-5">
+          <input
+            type="text"
+            name="date"
+            placeholder=" "
+            onclick="this.setAttribute('type', 'date');"
+            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          />
+          <label for="date" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Date</label>
+          <span class="text-sm text-red-600 hidden" id="error">Date is required</span>
         </div>
-      </form>
-    </div>
-  
-    <div class="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
-      <img
-        alt=""
-        src="https://images.unsplash.com/photo-1630450202872-e0829c9d6172?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-        class="absolute z-[-1] inset-0 h-full w-full object-cover"
-      />
-    </div>
-  </section>
+        <div class="relative z-0 w-full">
+          <input
+            type="text"
+            name="time"
+            placeholder=" "
+            onclick="this.setAttribute('type', 'time');"
+            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+          />
+          <label for="time" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Time</label>
+          <span class="text-sm text-red-600 hidden" id="error">Time is required</span>
+        </div>
+      </div>
+
+      <div class="relative z-0 w-full mb-5">
+        <input
+          type="text"
+          name="duration"
+          placeholder=" "
+          class="pt-3 pb-2 pr-12 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200"
+        />
+        <div class="absolute top-0 right-0 mt-3 mr-4 text-gray-400">min</div>
+        <label for="duration" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Duration</label>
+        <span class="text-sm text-red-600 hidden" id="error">Duration is required</span>
+      </div>
+
+      <button
+        id="button"
+        type="button"
+        class="w-full px-6 py-3 mt-3 text-lg text-white transition-all duration-150 ease-linear rounded-lg shadow outline-none bg-yellow-500 hover:bg-pink-600 hover:shadow-lg focus:outline-none"
+      >
+        Book Now
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  'use strict'
+
+  document.getElementById('button').addEventListener('click', toggleError)
+  const errMessages = document.querySelectorAll('#error')
+
+  function toggleError() {
+    // Show error message
+    errMessages.forEach((el) => {
+      el.classList.toggle('hidden')
+    })
+
+    // Highlight input and label with red
+    const allBorders = document.querySelectorAll('.border-gray-200')
+    const allTexts = document.querySelectorAll('.text-gray-500')
+    allBorders.forEach((el) => {
+      el.classList.toggle('border-red-600')
+    })
+    allTexts.forEach((el) => {
+      el.classList.toggle('text-red-600')
+    })
+  }
+</script>
 
   <script src="js/script.js"></script>
 
